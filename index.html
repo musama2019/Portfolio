@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Muhammad Usama | Portfolio</title>
+    <meta name="title" content="Muhammad Usama | Portfolio">
+    <meta name="description"
+        content="Welcome to my website. I'm Muhammad Usama, a Machine Learning Engineer. Find out my experience, education, projects, skills and contacts.">
+    <meta name="keywords"
+        content="computer engineering, artificial intelligence, ai, github, robotics, portfolio,curriculum vitae, cv">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="Muhammad Usama">
+    <meta name="copyright" content="Muhammad Usama">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS Library CSS -->
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="js/scripts.min.js" defer></script>
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- //AOS Library JS -->
+    <script type="text/javascript" src="js/aos-init.min.js" defer></script>
+    <script type="text/javascript" src="js/contact-en.min.js" defer></script>
+    <script type="text/javascript" src="js/aspect.min.js" defer></script>
+    <script type="text/javascript" src="js/filters.js" defer></script>
+    <script type="text/javascript" src="js/modal.js" defer></script>
+    
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            try {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'ar,bn,zh,fr,de,hi,id,it,ja,ko,pt,ru,es,tr,ur,nl,pl,sv,da,no,fi,el,he,th,vi,ms,tl,sw,am,my,km,lo,si,ne,ml,ta,te,kn,gu,pa,or,as,mr,bg,hr,cs,et,lv,lt,hu,mt,ro,sk,sl,ca,eu,gl,is,ga,cy,mk,sq,bs,sr,me,az,kk,ky,mn,tj,tk,uz,ka,hy,be,uk,af,zu,xh,st,tn,ts,ve,ss,nr,ny',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false,
+                    multilanguagePage: true
+                }, 'google_translate_element');
+                
+                console.log('Google Translate initialized successfully');
+            } catch (error) {
+                console.error('Error initializing Google Translate:', error);
+            }
+        }
+
+        // Show/hide translate widget when flag is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            const translateTrigger = document.getElementById('translate-trigger');
+            const translateElement = document.getElementById('google_translate_element');
+            
+            if (translateTrigger && translateElement) {
+                translateTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if (translateElement.style.display === 'none' || translateElement.style.display === '') {
+                        translateElement.style.display = 'block';
+                        // Force re-initialization if needed
+                        if (!translateElement.hasChildNodes() || translateElement.children.length === 0) {
+                            setTimeout(() => {
+                                if (typeof googleTranslateElementInit === 'function') {
+                                    googleTranslateElementInit();
+                                }
+                            }, 100);
+                        }
+                    } else {
+                        translateElement.style.display = 'none';
+                    }
+                });
+                
+                // Initially hide the translate element
+                translateElement.style.display = 'none';
+            }
+            
+            // Initialize Google Translate after a slight delay
+            setTimeout(() => {
+                if (typeof google !== 'undefined' && google.translate) {
+                    console.log('Google Translate API loaded');
+                } else {
+                    console.log('Google Translate API not loaded yet');
+                }
+            }, 1000);
+        });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- //Scripts -->
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    <!-- End #mobile-menu-toggle -->
+    <div class="lang-flag">
+        <div id="google_translate_element"></div>
+        <a href="#" id="translate-trigger" title="Select Language">
+            <img src="images/heading-flag-uk.svg" alt="Language"> 
+        </a>
+    </div>
+    <div class="dark-mode-button">
+        <label class="dark-mode-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" class="dark-mode-checkbox" />
+            <div class="slider round"></div>
+            <div class="toggle-moon"><i class="fas fa-moon"></i></div>
+            <div class="toggle-sun"><i class="fas fa-sun"></i></div>
+        </label>
+    </div>
+    <header>
+        <div id="mobile-menu-close"><span>Close</span> <i class="fa fa-times" aria-hidden="true"></i></div>
+        <ul id="menu" class="shadow">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="menu-links"><a href="https://www.linkedin.com/in/muhammad-usama-2ba170197" target="_blank" class="no-scroll"> <i
+                        class="fab fa-linkedin-in" aria-hidden="true"></i> </a> <a href="https://github.com/musama2019"
+                    target="_blank" class="no-scroll"> <i class="fab fa-github" aria-hidden="true"></i>
+                </a></li>
+            <li class="menu-links menu-flag"><a href="https://www.fiverr.com/usama_mlguy"
+                    title="Fiverr Profile" class="no-scroll"> <i class="fas fa-globe"></i>
+                </a></li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <div class="lead-flex-container">
+                <div class="lead-text">
+                    <p class="hello-text" data-aos="fade-up">HELLO, I'M</p>
+                    <h1 data-aos="fade-right" data-aos-offset="40">Muhammad Usama</h1>
+                    <h2 data-aos="fade-right" data-aos-offset="-70">AI Developer & Full-Stack Engineer</h2>
+                    <p class="lead-description" data-aos="fade-up">
+                        Leading AI development at NUST with expertise in LLMs, RAG systems, and GPU-accelerated 
+                        computing. Currently developing enterprise-level SaaS platforms using MERN stack. 
+                        Specialized in building production-ready AI solutions with modern web technologies.
+                    </p>
+                    <div class="lead-buttons" data-aos="fade-up" data-aos-offset="-120">
+                        <a href="#contact" class="btn-rounded-white">Contact Me</a>
+                        <a href="#projects" class="btn-rounded-white">View Projects</a>
+                        <a href="#" class="btn-rounded-white"><i class="fas fa-download"></i> Download CV</a>
+                    </div>
+                    <div class="social-icons" data-aos="fade-up" data-aos-offset="-140">
+                        <a href="https://github.com/musama2019" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muhammad-usama-2ba170197" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:musama2019@namal.edu.pk"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="lead-image" data-aos="fade-left">
+                    <img src="images/heading-profile.jpeg" class="profile-picture" alt="Muhammad Usama" />
+                </div>
+            </div>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+        <div id="lead-down"><span> <i class="fas fa-chevron-down" aria-hidden="true"></i> </span></div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about" class="section-card">
+        <h2 class="heading">About me</h2>
+        <div class="about-summary" data-aos="fade-right">
+            <p>
+                I'm Muhammad Usama, an AI Developer and Full-Stack Engineer specializing in enterprise-level AI solutions, 
+                Large Language Models, and modern web development. Currently leading AI development at NUST while building 
+                a comprehensive HR management SaaS platform using MERN stack architecture, demonstrating expertise across 
+                both AI technologies and full-stack development.
+                <br><br>
+                My expertise spans the complete development lifecycle from AI research and GPU infrastructure to full-stack 
+                web applications with React, Node.js, Express.js, and MongoDB. I've successfully deployed multiple 
+                production systems including SaaS platforms, RAG-based chatbots, and enterprise automation solutions across 
+                healthcare, legal, and HR domains. Proficient with vector databases, WebSocket implementations, and modern 
+                deployment practices.
+                <br><br>
+                With a background in Electrical Engineering from Namal University Mianwali and specialized AI training from NUST, 
+                I combine deep technical knowledge with practical full-stack development experience. Currently expanding my 
+                skill set in MERN stack development while maintaining expertise in Flask, Django, FastAPI, and low-code platforms 
+                like Bubble. I'm passionate about building scalable, enterprise-level solutions that integrate cutting-edge AI 
+                with robust web technologies.
+            </p>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt section-card">
+        <h2 class="heading">Professional experience</h2>
+        <div id="experience-timeline">
+            <div class="experience-block" data-date="June 2024 – Present" data-aos="fade-right">
+                <div class="company-logo nust-logo light"><a href="#" target="_blank"> <img
+                            src="images/nust_logo_dark.png" alt="NUST" /> </a></div>
+                <div class="company-logo nust-logo dark"><a href="#" target="_blank"> <img
+                            src="images/nust_logo_dark.png" alt="NUST" /> </a></div>
+                <div>
+                    <h3>NUST</h3>
+                    <h4>MTO (AI-Developer)</h4>
+                    <p class="location" style="margin-top: 0px !important; margin-bottom: 10px !important;"><i
+                            class="fas fa-map-marker-alt"></i>Islamabad, Pakistan</p>
+                    <div class="experience-short-desc">
+                        <p>Leading AI development at NUST with extensive experience in enterprise-level AI solutions. Currently developing a comprehensive HR management SaaS platform using MERN stack. Built and deployed multiple production systems including resume sorting platforms, meeting transcription services, and intelligent chatbots. Expertise in CUDA A100 GPUs, vector databases, and RAG technologies.</p>
+                    </div>
+                    <button class="learn-more-btn" data-modal="modal-nust">Learn More</button>
+                </div>
+            </div>
+            <div class="experience-block" data-date="January 2024 – Present" data-aos="fade-right">
+                <div class="company-logo fiverr-logo light"><a href="https://www.fiverr.com/usama_mlguy" target="_blank"> <img
+                            src="images/fiver_logo.png" alt="Fiverr" /> </a></div>
+                <div class="company-logo fiverr-logo dark"><a href="https://www.fiverr.com/usama_mlguy" target="_blank"> <img
+                            src="images/fiver_logo.png" alt="Fiverr" /> </a></div>
+                <div>
+                    <h3>Fiverr</h3>
+                    <h4>Data Scientist (Level 1 Seller)</h4>
+                    <p class="location" style="margin-top: 0px !important; margin-bottom: 10px !important;"><i
+                            class="fas fa-map-marker-alt"></i>Remote</p>
+                    <div class="experience-short-desc">
+                        <p>Delivered enterprise-level SaaS platforms and automation solutions across healthcare, legal, and coaching domains. Built complete platforms with user authentication, role-based access, payment integration, and advanced AI chatbot functionality. Expertise spans low-code platforms (Bubble), WordPress automation, RAG systems, and production-ready deployments.</p>
+                    </div>
+                    <button class="learn-more-btn" data-modal="modal-fiverr">Learn More</button>
+                </div>
+            </div>
+            <div class="experience-block" data-date="September 2023 – November 2023" data-aos="fade-right">
+                <div class="company-logo nust-logo light"><a href="#" target="_blank"> <img
+                            src="images/nust_logo_dark.png" alt="NUST" /> </a></div>
+                <div class="company-logo nust-logo dark"><a href="#" target="_blank"> <img
+                            src="images/nust_logo_dark.png" alt="NUST" /> </a></div>
+                <div>
+                    <h3>Advance AI And DNN Bootcamp</h3>
+                    <h4>Trainee</h4>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i>NUST, Islamabad</p>
+                    <div class="experience-short-desc">
+                        <p>Completed an intensive boot camp covering topics such as fundamentals of AI, deep learning, 
+                        Python, machine learning, computer vision, natural language processing, and special topics in deep learning.</p>
+                    </div>
+                    <button class="learn-more-btn" data-modal="modal-bootcamp">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <!-- Experience Modals -->
+    <div class="modal-overlay" id="modal-nust">
+        <div class="modal-container">
+            <div class="modal-close"><i class="fas fa-times"></i></div>
+            <div class="modal-header">
+                <h3>NUST</h3>
+                <h4>MTO (AI-Developer)</h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>AI Resume Sorter:</strong> Built a complete SaaS platform for intelligent resume sorting with custom rubrics and job descriptions. Features automated analysis, explanations for sorting decisions, and comprehensive resume insights. Deployed on rs.seecs.edu.pk with full user integration and database management.</p>
+                
+                <p><strong>AI Minutes Maker:</strong> Developed a multilingual meeting transcription system using OpenAI Whisper. Automatically generates meeting minutes upon meeting conclusion, deployed on NUST's local server infrastructure.</p>
+                
+                <p><strong>GPU Infrastructure & LLMs:</strong> Extensive experience with CUDA A100 GPUs, setting up CUDA libraries, and running multiple large language models. Optimized GPU performance for various AI workloads and model deployments.</p>
+                
+                <p><strong>NUST Policy Chatbot:</strong> Implemented an intelligent chatbot for NUST policy inquiries using RAG technologies and LangChain. Integrated directly into NUST's LMS for seamless user experience.</p>
+                
+                <p><strong>NUST Personality Index Portal (MERN Stack):</strong> Currently developing a comprehensive HR management SaaS platform using full MERN stack architecture. Features complete candidate lifecycle management, dynamic test creation with multiple question types, protective full-screen testing environment with activity monitoring, AI-powered analysis of test results, and extensive admin dashboards. Includes multi-organization support with directorates, real-time WebSocket support system, and dynamic role-based permissions. A career-defining project showcasing enterprise-level full-stack development capabilities.</p>
+                
+                <p><strong>NustGuide - Student Assistant App:</strong> Developed "NustGuide", a comprehensive React Native mobile application for NUST students to help solve various queries and access university services. Currently upgrading the app to include voice call agent functionality for a fully interactive student support system.</p>
+                
+                <p><strong>Vector Database Expertise:</strong> Proficient with FAISS, Pinecone, Chroma, and Weaviate. Created custom embeddings using A100 GPUs for optimized semantic search and retrieval systems.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-fiverr">
+        <div class="modal-container">
+            <div class="modal-close"><i class="fas fa-times"></i></div>
+            <div class="modal-header">
+                <h3>Fiverr</h3>
+                <h4>Data Scientist (Level 1 Seller)</h4>
+            </div>
+            <div class="modal-body">
+                <p><strong>YouTube Video Intelligence System:</strong> Developed an interactive platform where users can input YouTube video URLs and ask questions about the content. Features include video summarization, quiz generation, and automatic note creation for enhanced learning experiences.</p>
+                
+                <p><strong>Machine Learning Applications:</strong> Built diverse ML solutions including Fish Hunger Detection using transfer learning, advanced Malware Detection and Cleaning systems, and RegulAI Assistant for organizational information access.</p>
+                
+                <p><strong>Full-Stack Development:</strong> Extensive experience with Flask, Django, and FastAPI frameworks for web application development. Created scalable backends for various AI and data science applications with robust API designs.</p>
+                
+                <p><strong>Data Engineering Pipeline:</strong> Comprehensive data solutions from web scraping and data extraction to cleaning, visualization, and analysis. Handled complex data workflows and automation for multiple clients.</p>
+                
+                <p><strong>HubMed.ai Automation Platform:</strong> Developed a comprehensive WordPress job portal automation system with intelligent web scraping from 15+ healthcare recruitment portals. Features one-click job posting via WP Admin, custom cost-free maps integration, and daily automated job scraping. Successfully maintains 20,000+ healthcare job listings with full automation and 99.8% data accuracy.</p>
+                
+                <p><strong>Sanbjur.de Legal SaaS Platform:</strong> Built a complete SaaS platform for German legal document analysis with ~23k legal documents. Features user authentication, role-based access control, admin dashboard for vector database management, and dynamic document addition. Users receive answers with exact paragraph references and clickable source documents for precise legal information retrieval.</p>
+                
+                <p><strong>Believe Coach - AI-Powered Coaching Platform:</strong> Developed a comprehensive coaching platform on Bubble integrating AI chatbot functionality, complete user management system, and payment processing. Features dynamic one-time promo code generation where admins can provide time-limited access to customers. Built with low-code expertise on Bubble platform, demonstrating versatility across development environments.</p>
+                
+                <p><strong>Model Training & Deployment:</strong> End-to-end machine learning lifecycle management including model training, optimization, deployment, and monitoring. Specialized in production-ready AI solutions with scalable architectures.</p>
+                
+                <p><strong>Custom AI Solutions:</strong> Delivered tailored artificial intelligence applications across various industries, consistently achieving high client satisfaction ratings and positive feedback for technical excellence and project management.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-bootcamp">
+        <div class="modal-container">
+            <div class="modal-close"><i class="fas fa-times"></i></div>
+            <div class="modal-header">
+                <h3>Advance AI And DNN Bootcamp</h3>
+                <h4>Trainee</h4>
+            </div>
+            <div class="modal-body">
+                <p>Completed an intensive boot camp covering topics such as fundamentals of AI, deep learning, 
+                    Python, machine learning, computer vision, natural language processing, and special topics in deep 
+                    learning.</p>
+                <p>Engaged in hands-on sessions, practical implementations, and projects under the guidance of industry 
+                    experts.</p>
+                <p>Expanded knowledge in areas such as deep neural networks, convolutional neural networks, recurrent 
+                    neural networks, and generative adversarial networks.</p>
+                <p>Gained expertise in using popular frameworks such as TensorFlow and PyTorch for implementing 
+                    advanced AI models.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="education" class="section-card">
+        <h2 class="heading">Education</h2>
+        <div class="education-block" data-aos="fade-right">
+            <div class="company-logo namal-logo light"><a href="#" target="_blank"> <img
+                        src="images/namal_uni_logo-removebg-preview.png" alt="Namal University" /> </a></div>
+            <div class="company-logo namal-logo dark"><a href="#" target="_blank"> <img
+                        src="images/namal_uni_logo-removebg-preview.png" alt="Namal University" /> </a></div>
+            <div>
+                <h3>Namal University Mianwali</h3>
+                <span class="education-date">2019 – 2023</span>
+                <h4 class="with-grade">BS Electrical Engineering</br>
+                    <i>Specialization: Machine Learning</i>
+                </h4>
+                <p class="final-grade">Final grade: 2.98/4</p>
+                <ul>
+                    <li>Degree thesis: "Cellular Traffic Prediction Using Federated Learning".<br>
+                        <a href="#"
+                            target="_blank">Download (preview)&nbsp;&nbsp;<i class="fas fa-download"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="education-block" data-aos="fade-right">
+            <div class="company-logo pgc-logo light"><a href="#" target="_blank"> <img
+                        src="images/pgc_logo-removebg-preview.png" alt="Punjab College" /> </a></div>
+            <div class="company-logo pgc-logo dark"><a href="#" target="_blank"> <img
+                        src="images/pgc_logo-removebg-preview.png" alt="Punjab College" /> </a></div>
+            <div>
+                <h3>Punjab College Sargodha</h3>
+                <span class="education-date">2017 – 2019</span>
+                <h4 class="with-grade">FSc - Pre-Engineering</h4>
+                <p class="final-grade">Final grade: 893/1100</p>
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="background-alt section-card">
+        <h2 class="heading">Projects</h2>
+        
+        <!-- Project Categories -->
+        <div class="project-categories" data-aos="fade-up">
+            <button class="category-btn active" data-filter="all">All</button>
+            <button class="category-btn" data-filter="ai-ml">AI/ML</button>
+            <button class="category-btn" data-filter="data-scraping">Data Scraping</button>
+            <button class="category-btn" data-filter="web-dev">Web Development</button>
+            <button class="category-btn" data-filter="mobile-app">Mobile Apps</button>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <!-- AI/ML Projects -->
+                <div class="project shadow-large project-item ai-ml web-dev" data-aos="fade-right">
+                    <div class="project-image"><a href="#" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/0066cc/ffffff?text=NUST+Personality+Index+Portal" alt="NUST Personality Index Portal" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>NUST Personality Index Portal (MERN Stack)</h3>
+                        <p>Currently developing a comprehensive HR management SaaS platform using full MERN stack architecture. 
+                           Features complete candidate lifecycle management, dynamic test creation, protective full-screen testing with activity monitoring, 
+                           AI-powered result analysis, multi-organization support with directorates, real-time WebSocket support system, 
+                           and dynamic role-based permissions. A career-defining enterprise-level platform revolutionizing hiring processes.</p>
+                        <div class="project-tags">
+                            <span class="tag">MERN Stack</span>
+                            <span class="tag">HR Management</span>
+                            <span class="tag">WebSocket</span>
+                            <span class="tag">AI Analysis</span>
+                            <span class="tag">Enterprise SaaS</span>
+                        </div>
+                        <a href="#" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <div class="project shadow-large project-item ai-ml" data-aos="fade-right">
+                    <div class="project-image"><a href="#" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/28a745/ffffff?text=AI+Resume+Sorter" alt="AI Resume Sorter" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>AI Resume Sorter SaaS Platform</h3>
+                        <p>Built a comprehensive SaaS platform for intelligent resume sorting using custom rubrics and job descriptions. 
+                           Features automated analysis, detailed explanations for sorting decisions, and comprehensive resume insights. 
+                           Complete with user authentication, database integration, and deployed on rs.seecs.edu.pk.</p>
+                        <div class="project-tags">
+                            <span class="tag">SaaS</span>
+                            <span class="tag">AI Analysis</span>
+                            <span class="tag">Database Integration</span>
+                            <span class="tag">Web Deployment</span>
+                        </div>
+                        <a href="http://rs.seecs.edu.pk" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <div class="project shadow-large project-item ai-ml" data-aos="fade-right">
+                    <div class="project-image"><a href="#" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/dc3545/ffffff?text=YouTube+AI+System" alt="YouTube AI System" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>YouTube Video Intelligence System</h3>
+                        <p>Developed an interactive platform where users input YouTube video URLs to ask questions about content, 
+                           generate summaries, attempt quizzes, and receive automated notes. Built with advanced NLP capabilities 
+                           for comprehensive video content analysis and educational enhancement.</p>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Video Analysis</span>
+                            <span class="tag">Quiz Generation</span>
+                            <span class="tag">Educational AI</span>
+                        </div>
+                        <a href="#" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <div class="project shadow-large project-item ai-ml" data-aos="fade-right">
+                    <div class="project-image"><a href="https://github.com/musama2019/RegulAI_Assistant" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/6f42c1/ffffff?text=RegulAI+Assistant" alt="RegulAI Assistant" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>RegulAI Assistant</h3>
+                        <p>Developed a smart chatbot called "RegulAI Assistant" for organizational policy access. 
+                           Leveraging Retrieval-Augmented Generation (RAG), the system efficiently addresses inquiries 
+                           regarding organizational policies and regulations. Developed an API for seamless ML model 
+                           deployment and integration within a Flask frontend.</p>
+                        <div class="project-tags">
+                            <span class="tag">RAG</span>
+                            <span class="tag">LLMs</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">API Development</span>
+                        </div>
+                        <a href="https://github.com/musama2019/RegulAI_Assistant" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <div class="project shadow-large project-item ai-ml" data-aos="fade-right">
+                    <div class="project-image"><a href="https://github.com/musama2019/Cellular-traffic-Prediction-Using-Federated-Learning" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/fd7e14/ffffff?text=Cellular+Traffic+Prediction" alt="Cellular Traffic Prediction" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Cellular Traffic Prediction Using Federated Learning</h3>
+                        <p>Final Year Project that harnessed the power of Federated Learning for Cellular Traffic Prediction,
+                           improving the accuracy of predictions while preserving user data privacy. Compared performance of 
+                           Federated Learning algorithms (FedAvg and FedAtt) with traditional methods like ARIMA, GARCH, 
+                           Deep Neural Networks, and LSTM.</p>
+                        <div class="project-tags">
+                            <span class="tag">Federated Learning</span>
+                            <span class="tag">Time Series Analysis</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Privacy Preservation</span>
+                        </div>
+                        <a href="https://github.com/musama2019/Cellular-traffic-Prediction-Using-Federated-Learning" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <div class="project shadow-large project-item ai-ml" data-aos="fade-right">
+                    <div class="project-image"><a href="https://github.com/musama2019/QuesNet" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/17a2b8/ffffff?text=QuesNet" alt="QuesNet" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>QuesNet: Question Answering System</h3>
+                        <p>Developed a Question Answering system leveraging a fine-tuned BERT-based model on the SQuAD 2.0 dataset.
+                           The system is integrated with a Flask frontend, supporting PDF, TXT, and Excel file formats. It extracts 
+                           relevant information from documents, provides accurate answers to user queries, and intelligently identifies 
+                           unanswerable questions.</p>
+                        <div class="project-tags">
+                            <span class="tag">BERT</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Document Processing</span>
+                    </div>
+                        <a href="https://github.com/musama2019/QuesNet" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <!-- Mobile App Projects -->
+                <div class="project shadow-large project-item mobile-app ai-ml" data-aos="fade-right">
+                    <div class="project-image"><a href="#" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/20c997/ffffff?text=NustGuide+App" alt="NustGuide App" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>NustGuide - Student Assistant App</h3>
+                        <p>Developed "NustGuide", a comprehensive React Native mobile application designed specifically for NUST students. 
+                           The app helps students solve various queries, access university services, and navigate campus resources. 
+                           Currently upgrading to include voice call agent functionality for fully interactive student support.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Mobile Development</span>
+                            <span class="tag">Voice AI</span>
+                            <span class="tag">Student Services</span>
+                        </div>
+                        <a href="#" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <!-- SaaS Platform Projects -->
+                <div class="project shadow-large project-item ai-ml web-dev" data-aos="fade-right">
+                    <div class="project-image"><a href="#" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/e83e8c/ffffff?text=Sanbjur+Legal+RAG" alt="Sanbjur Legal RAG SaaS" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Sanbjur.de - German Legal RAG SaaS Platform</h3>
+                        <p>Built a comprehensive SaaS platform for German legal document analysis with ~23k legal documents. 
+                           Features complete user authentication, role-based access control, and admin dashboard for vector database management. 
+                           Users can query legal problems and receive answers with exact paragraph references. Admins can dynamically 
+                           add documents to the vector database, with full user management capabilities and source document linking.</p>
+                        <div class="project-tags">
+                            <span class="tag">RAG System</span>
+                            <span class="tag">SaaS Platform</span>
+                            <span class="tag">Vector Database</span>
+                            <span class="tag">Role-Based Access</span>
+                            <span class="tag">Legal Tech</span>
+                        </div>
+                        <a href="https://sanbjur.de" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <!-- Low-Code AI Platform Projects -->
+                <div class="project shadow-large project-item ai-ml web-dev" data-aos="fade-right">
+                    <div class="project-image"><a href="https://believe-coaching-12279.bubbleapps.io/" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/6610f2/ffffff?text=Believe+Coach+Platform" alt="Believe Coach Platform" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Believe Coach - AI-Powered Coaching Platform</h3>
+                        <p>Developed a comprehensive coaching platform on Bubble integrating AI chatbot functionality with complete user management 
+                           and payment processing systems. Features dynamic one-time promo code generation where admins can provide time-limited 
+                           access to customers. Demonstrates expertise in low-code development while maintaining enterprise-level functionality 
+                           and AI integration capabilities.</p>
+                        <div class="project-tags">
+                            <span class="tag">Bubble Platform</span>
+                            <span class="tag">AI Chatbot</span>
+                            <span class="tag">Payment Integration</span>
+                            <span class="tag">Low-Code Development</span>
+                            <span class="tag">Coaching Tech</span>
+                        </div>
+                        <a href="https://believe-coaching-12279.bubbleapps.io/" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <!-- Data Scraping & Automation Projects -->
+                <div class="project shadow-large project-item data-scraping web-dev" data-aos="fade-right">
+                    <div class="project-image"><a href="#" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/ffc107/000000?text=HubMed+Automation" alt="HubMed Automation Platform" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>HubMed.ai - Healthcare Job Portal Automation</h3>
+                        <p>Developed a comprehensive WordPress job portal automation system for HubMed.ai. Integrated intelligent web scraping 
+                           from 15+ healthcare recruitment portals with one-click job posting via WP Admin. Features custom cost-free maps 
+                           integration, daily automated job scraping and posting, advanced CAPTCHA bypass, and session management. 
+                           Successfully maintains 20,000+ healthcare job listings with 99.8% data accuracy and full automation.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress Automation</span>
+                            <span class="tag">Web Scraping</span>
+                            <span class="tag">Daily Automation</span>
+                            <span class="tag">Custom Maps</span>
+                            <span class="tag">Healthcare Tech</span>
+                        </div>
+                        <a href="https://hubmed.ai" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <!-- Fish Hunger Detection Project -->
+                <div class="project shadow-large project-item ai-ml" data-aos="fade-right">
+                    <div class="project-image"><a href="#" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/0dcaf0/000000?text=Fish+Hunger+Detection" alt="Fish Hunger Detection" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Fish Hunger Detection System</h3>
+                        <p>An AI system that uses transfer learning to detect fish hunger patterns in aquaculture settings. 
+                           The model analyzes fish behavior and movement patterns to optimize feeding schedules and reduce waste.
+                           Developed as part of freelance work on Fiverr, this solution helps fish farmers improve efficiency
+                           and sustainability in their operations.</p>
+                        <div class="project-tags">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Transfer Learning</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Aquaculture</span>
+                    </div>
+                        <a href="#" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <!-- Malware Detection Project -->
+                <div class="project shadow-large project-item ai-ml" data-aos="fade-right">
+                    <div class="project-image"><a href="https://github.com/musama2019/Cyberattack_detection" target="_blank">
+                            <img src="https://via.placeholder.com/300x200/495057/ffffff?text=Cyberattack+Detection" alt="Cyberattack Detection" />
+                        </a></div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Cyberattack Detection System</h3>
+                        <p>A machine learning-based system for detecting and preventing cyberattacks. The solution uses advanced 
+                           classification algorithms to identify malicious patterns in network traffic and system behavior.
+                           Features comprehensive threat detection capabilities with high accuracy and minimal false positives,
+                           helping organizations protect their digital infrastructure from various cyber threats.</p>
+                        <div class="project-tags">
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Classification</span>
+                            <span class="tag">Threat Detection</span>
+                    </div>
+                        <a href="https://github.com/musama2019/Cyberattack_detection" target="_blank">View Project&nbsp;&nbsp;<i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills" class="section-card">
+        <h2 class="heading">Skills</h2>
+        
+        <div class="skills-container">
+            <div class="skills-group" data-aos="fade-up">
+                <ul class="skills-list">
+                    <!-- AI/ML Skills -->
+                    <li data-aos="fade-up"><a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a></li>
+                    <li data-aos="fade-right"><a href="https://pytorch.org/" target="_blank">PyTorch</a></li>
+                    <li data-aos="fade-down"><a href="https://scikit-learn.org/" target="_blank">Scikit-learn</a></li>
+                    <li data-aos="fade-left"><a href="https://opencv.org" target="_blank">OpenCV</a></li>
+                    <li data-aos="fade-up"><a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank">Machine Learning</a></li>
+                    <li data-aos="fade-right"><a href="https://en.wikipedia.org/wiki/Deep_learning" target="_blank">Deep Learning</a></li>
+                    <li data-aos="fade-down"><a href="https://en.wikipedia.org/wiki/Natural_language_processing" target="_blank">NLP</a></li>
+                    <li data-aos="fade-left"><a href="https://en.wikipedia.org/wiki/Computer_vision" target="_blank">Computer Vision</a></li>
+                    <li data-aos="fade-up"><a href="https://huggingface.co/" target="_blank">Hugging Face</a></li>
+                    <li data-aos="fade-right"><a href="https://www.langchain.com/" target="_blank">LangChain</a></li>
+                    
+                    <!-- Programming Skills -->
+                    <li data-aos="fade-up"><a href="https://www.python.org" target="_blank">Python</a></li>
+                    <li data-aos="fade-right"><a href="https://www.javascript.com" target="_blank">JavaScript</a></li>
+                    <li data-aos="fade-down"><a href="http://www.open-std.org/jtc1/sc22/wg14/" target="_blank">C</a></li>
+                    <li data-aos="fade-left"><a href="https://docs.microsoft.com/en-gb/dotnet/csharp/" target="_blank">C#</a></li>
+                    <li data-aos="fade-up"><a href="https://www.java.com/en/" target="_blank">Java</a></li>
+                    <li data-aos="fade-right"><a href="https://en.wikipedia.org/wiki/SQL" target="_blank">SQL</a></li>
+                    <li data-aos="fade-down"><a href="https://www.gnu.org/software/bash/" target="_blank">Bash</a></li>
+                    <li data-aos="fade-left"><a href="https://dart.dev/" target="_blank">Dart</a></li>
+                    
+                    <!-- Web & Mobile Skills -->
+                    <li data-aos="fade-up"><a href="https://www.w3.org/html/" target="_blank">HTML</a></li>
+                    <li data-aos="fade-right"><a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">CSS</a></li>
+                    <li data-aos="fade-down"><a href="https://reactjs.org/" target="_blank">React</a></li>
+                    <li data-aos="fade-left"><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+                    <li data-aos="fade-up"><a href="https://expressjs.com/" target="_blank">Express.js</a></li>
+                    <li data-aos="fade-right"><a href="https://www.mongodb.com/" target="_blank">MongoDB</a></li>
+                    <li data-aos="fade-down"><a href="https://socket.io/" target="_blank">WebSocket/Socket.io</a></li>
+                    <li data-aos="fade-left"><a href="https://www.djangoproject.com/" target="_blank">Django</a></li>
+                    <li data-aos="fade-up"><a href="https://flutter.dev/" target="_blank">Flutter</a></li>
+                    <li data-aos="fade-right"><a href="https://firebase.google.com/" target="_blank">Firebase</a></li>
+                    <li data-aos="fade-down"><a href="https://jquery.com" target="_blank">jQuery</a></li>
+                    
+                    <!-- Tools & Platforms -->
+                    <li data-aos="fade-up"><a href="https://git-scm.com" target="_blank">Git</a></li>
+                    <li data-aos="fade-right"><a href="https://www.docker.com/" target="_blank">Docker</a></li>
+                    <li data-aos="fade-down"><a href="https://www.linux.org" target="_blank">Linux</a></li>
+                    <li data-aos="fade-left"><a href="https://aws.amazon.com/" target="_blank">AWS</a></li>
+                    <li data-aos="fade-up"><a href="https://cloud.google.com/" target="_blank">Google Cloud</a></li>
+                    <li data-aos="fade-right"><a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a></li>
+                    <li data-aos="fade-down"><a href="https://www.scrum.org" target="_blank">SCRUM</a></li>
+                    <li data-aos="fade-left"><a href="https://www.atlassian.com/software/jira" target="_blank">Jira</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact" class="section-card">
+        <h2>Contact me</h2>
+        <div class="contact-info" data-aos="fade-right">
+            <p><i class="fas fa-envelope"></i> musama2019@namal.edu.pk</p>
+            <p><i class="fas fa-phone"></i> (+92) 3096313137</p>
+        </div>
+        <div id="contact-form">
+            <form action="https://formspree.io/f/mrbkjrqo" method="POST">
+                <input type="email" name="email" placeholder="Your e-mail" required data-aos="fade-right">
+                <input type="text" name="name" placeholder="Your name" required data-aos="fade-right">
+                <textarea name="message" placeholder="Your message" required data-aos="fade-right"></textarea>
+                <button type="submit" data-aos="fade-right">Send&nbsp;&nbsp;<i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="copyright">
+                <div class="copyright-inner">
+                    <p> Muhammad Usama &copy; 2024 </p>
+                    <a class="acknowledgements-link">Acknowledgements</a>
+                </div>
+            </div>
+            <div class="acknowledgements-wrapper">
+                <div class="acknowledgements-inner">
+                    <div class="acknowledgements-exit"><span>Close</span> <i class="fas fa-times"></i></div>
+                    <h2 class="heading">Acknowledgements</h2>
+                    <div class="acknowledgements-disclaimer">This website has been created using the following tools and resources:
+                    </div>
+                    <div class="acknowledgements-list">
+                        <div>&mdash;&nbsp;&nbsp;<a href="https://github.com/RyanFitzgerald/devportfolio"
+                                target="_blank">Dev Portfolio</a> by <a href="https://www.ryanfitzgerald.ca" target="_blank">Ryan
+                                Fitzgerald</a>
+                        </div>
+                        <div>&mdash;&nbsp;&nbsp;<a href="https://fontawesome.com" target="_blank">Font Awesome Icons</a></div>
+                        <div>&mdash;&nbsp;&nbsp;<a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></div>
+                        <div>&mdash;&nbsp;&nbsp;<a href="https://jquery.com" target="_blank">jQuery</a></div>
+                        <div>&mdash;&nbsp;&nbsp;<a href="https://michalsnik.github.io/aos/" target="_blank">AOS - Animate On Scroll</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="acknowledgements-overlay"></div>
+            <div class="top"><span id="to-top"> <i class="fas fa-chevron-up" aria-hidden="true"></i> </span></div>
+            <div class="social">
+                <div><a href="https://www.linkedin.com/in/muhammad-usama-2ba170197" target="_blank"><i class="fab fa-linkedin-in"
+                            aria-hidden="true"></i></a></div>
+                <div><a href="https://github.com/musama2019" target="_blank"><i class="fab fa-github"
+                            aria-hidden="true"></i></a></div>
+                <div><a href="https://www.fiverr.com/usama_mlguy" target="_blank"><i class="fas fa-globe"
+                            aria-hidden="true"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- AI Chatbot Widget -->
+    <div id="chatbot-widget">
+        <div id="chatbot-button">
+            <i class="fas fa-robot"></i>
+            <span class="chatbot-tooltip">Ask me anything!</span>
+        </div>
+        
+        <div id="chatbot-container">
+            <div id="chatbot-header">
+                <div class="chatbot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chatbot-info">
+                    <h4>Usama AI Assistant</h4>
+                    <span class="chatbot-status">Online</span>
+                </div>
+                <button id="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hi! I'm Usama's AI assistant. I can answer questions about his experience, projects, skills, and background. What would you like to know?</p>
+                        <div class="quick-questions">
+                            <button class="quick-btn" data-question="What projects has Usama worked on?">Recent Projects</button>
+                            <button class="quick-btn" data-question="What are Usama's technical skills?">Technical Skills</button>
+                            <button class="quick-btn" data-question="Tell me about Usama's experience at NUST">NUST Experience</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="chatbot-input-area">
+                <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="chatbot-input" placeholder="Ask me anything about Usama..." maxlength="500">
+                    <button id="chatbot-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End AI Chatbot Widget -->
+
+</body>
+
+</html>
